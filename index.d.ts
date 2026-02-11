@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2026 The Stdlib Authors.
@@ -16,22 +16,32 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
 
-var uniform = require( '@stdlib/random-base-uniform' );
-var bernoulli = require( '@stdlib/random-base-bernoulli' );
-var filledarrayBy = require( '@stdlib/array-filled-by' );
-var nanmidrange = require( './../lib' );
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
 
-function rand() {
-	if ( bernoulli( 0.8 ) < 1 ) {
-		return NaN;
-	}
-	return uniform( -50.0, 50.0 );
-}
+import { NumericArray, Collection, AccessorArrayLike } from '@stdlib/types/array';
 
-var x = filledarrayBy( 10, 'float64', rand );
-console.log( x );
+/**
+* Input array.
+*/
+type InputArray = NumericArray | Collection<number> | AccessorArrayLike<number>;
 
-var v = nanmidrange( x );
-console.log( v );
+/**
+* Computes the midrange of an array, ignoring `NaN` values.
+*
+* @param x - input array
+* @returns midrange
+*
+* @example
+* var x = [ 1.0, -2.0, NaN, 2.0 ];
+*
+* var v = nanmidrange( x );
+* // returns 0.0
+*/
+declare function nanmidrange( x: InputArray ): number;
+
+
+// EXPORTS //
+
+export = nanmidrange;
