@@ -50,7 +50,7 @@ The [**mid-range**][mid-range] is defined as the arithmetic mean of the maximum 
 ## Usage
 
 ```javascript
-import nanmidrange from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-array-nanmidrange@deno/mod.js';
+import nanmidrange from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-array-nanmidrange@v0.0.0-deno/mod.js';
 ```
 
 #### nanmidrange( x )
@@ -93,7 +93,7 @@ The function has the following parameters:
 import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-uniform@deno/mod.js';
 import bernoulli from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-bernoulli@deno/mod.js';
 import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@deno/mod.js';
-import nanmidrange from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-array-nanmidrange@deno/mod.js';
+import nanmidrange from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-array-nanmidrange@v0.0.0-deno/mod.js';
 
 function rand() {
     if ( bernoulli( 0.8 ) < 1 ) {
